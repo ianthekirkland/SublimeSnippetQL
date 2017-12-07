@@ -7,22 +7,24 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: "Panic Sans", Menlo, "Source Code Pro", Monaco, "Courier New", monospace;
-      font-size: 11pt;
+      font-family: Menlo, "Source Code Pro", "Panic Sans", Monaco, "Courier New", monospace;
+      /*font-family: -apple-system, BlinkMacSystemFont, "Helvetica", "Helvetica Neue", "Roboto", ​"Arial", ​sans-serif;*/
+      font-size: 10pt;
       color: #333;
       background-color: #fcfcfc;
+      zoom: 90%;
     }
     h1 {
       margin: 8px;
-      font-size: 13pt;
-      color: #578dac;
+      font-size: 12pt;
+      color: #FD812B;
     }
     pre {
       display:list-item;
       margin: 0;
       padding: 0;
-      font-family: "Panic Sans", Menlo, "Source Code Pro", Monaco, "Courier New", monospace;
-      font-size: 11pt;
+      font-family: Menlo, "Source Code Pro", "Panic Sans", Monaco, "Courier New", monospace;
+      font-size: 10pt;
       overflow: auto;
       white-space: pre-wrap;
       word-wrap: break-word;
@@ -46,19 +48,97 @@
       line-height: 150%;
       border-bottom: 1px solid #dddddd;
     }
+    h1, dt {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica", "Helvetica Neue", "Roboto", ​"Arial", ​sans-serif;
+    }
+    header {
+      background-color: #4B4B4B;
+      padding: 18px 0;
+      display: block;
+    }
+    header > section {
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+    header > section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    header div#logo {
+      float: left;
+    }
+    header div#logo img {
+      margin-left: 1em;
+      width: 199px;
+      height: 22px;
+      display: block;
+      border: none;
+      transition: opacity 0.15s ease-in-out;
+      -webkit-transition: opacity 0.15s ease-in-out;
+    }
+    header nav {
+      float: right;
+      line-height: 22px;
+      vertical-align: middle;
+    }
+
+    header nav div {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 32px;
+      display: inline-block;
+      transition: color 0.15s ease-in-out;
+      -webkit-transition: color 0.15s ease-in-out;
+      font-size: 2em;
+      vertical-align: middle;
+      position: relative;
+    }
+
+    header nav div span {
+      bottom: .75em;
+      position: relative;
+      margin-right: 3em;
+      text-align: left;
+    }
+
   </style>
+  <!--  
+  <script>
+    var myTitle = "%title%";
+    var newTitle = myTitle.replace(".sublime-snippet", "");
+    var elem = document.getElementById('snpt');
+    elem.textContent = newTitle;
+  </script>
+  -->
+  
 </head>
 <body>
-  <h1>%title%</h1>
+  <!-- <div style="display:block; background-color:rgba(253, 159, 43, 1); height:40px; width:100%;"> -->
+  <header>
+      <section>
+          <div id="logo">
+              <img src="http://www.sublimetext.com/images/logo.svg" alt="Sublime Text">
+          </div>
+      </section>
+      <nav>
+        <!-- <div style="font-family:-apple-system, BlinkMacSystemFont, sans-serif; margin-bottom: 2em;"><span>%title%</span></div> -->
+      </nav>
+  </header>
+  <div class="container" style="width:88%; margin:auto; text-align: left;">
+    <h2 id="snpt" class="h2" style="font-family:-apple-system, BlinkMacSystemFont, sans-serif; color:rgba(253, 139, 43, 1)" >%title%</h1>
+  </div>
+  <!-- <h1  style="font-family:-apple-system, BlinkMacSystemFont, sans-serif; margin-bottom: 2em;">%title%</h1> -->
   <dl>
-  <dt>content:</dt>
-  <dd><pre><content></content></pre></dd>
-  <dt>tabTrigger:</dt>
+  <dt  style="font-family:-apple-system, BlinkMacSystemFont, sans-serif;">tabTrigger:</dt>
   <dd><tabTrigger></tabTrigger></dd>
-  <dt>scope:</dt>
+  <dt  style="font-family:-apple-system, BlinkMacSystemFont, sans-serif;">scope:</dt>
   <dd><scope></scope></dd>
-  <dt>description:</dt>
+  <dt  style="font-family:-apple-system, BlinkMacSystemFont, sans-serif;">description:</dt>
   <dd><description></description></dd>
+  <dt  style="font-family:-apple-system, BlinkMacSystemFont, sans-serif;">content:</dt>
+  <dd><pre><content></content></pre></dd>
   </dl>
 </body>
 </html>
